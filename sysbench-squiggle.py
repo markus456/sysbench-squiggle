@@ -57,6 +57,7 @@ def animate(i):
 
     # Scale Y axis to 130% of max Y value
     ax.set_ylim(0, np.amax(y) * 1.3)
+    ax.figure.canvas.draw()
 
     # Smooth the output
     dy = interpolate.InterpolatedUnivariateSpline(x, y)(dx)
